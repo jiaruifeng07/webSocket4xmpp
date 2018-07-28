@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="css/webRtcDemo.css" />
+        <script src='http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js'></script>
+        <script src="js/openfire4.js"></script>
+        <script src="js/Base64Util.js"></script>
+    </head>
+    
+    <body>
+        <br />
+        <form class="SubPane" name="ConnectionForm" onsubmit="connect(this)" action="javascript:void(0);">
+            <b>UserId(username):</b> <input type="text" name="UserId" value="fffjia" />
+            <b>password:</b> <input type="text" name="password" value="111111"/>
+            <input type="submit" value="Connect" />
+        </form> 
+        <hr />
+
+        <br />
+        
+         <table class="subPane">
+            <tr>
+                <td><b>Recipient:</b></td>
+                <td><b>recipientId</b> <input type="text" id="recipientId" name="recipientId" /></td>
+            </tr>
+             <tr>
+                 <td><b>Message:</b></td>
+                 <td>
+                     <textarea class="Message" name="Message" id="Message" rows="5"></textarea>
+                 </td>
+             </tr>
+             <tr>
+                 <td>发送文件</td>
+                 <td>
+                     <input id="fileInput" name="fileInput" type="file" />
+                 </td>
+             </tr>
+             <tr>
+                 <td></td>
+                 <td><button class="SendButton" name="SendButton" onclick="sendMessage()">Send Message</button></td>
+             </tr>
+             <tr>
+                 <td></td>
+                 <td><button class="SendButton" name="SendButton" onclick="sendFile()">Send Message</button></td>
+             </tr>
+            <tr>
+                <td><b>Status:</b></td>
+                <td><div class="StatusMessage" id="StatusMessage">OK</div></td>
+            </tr>
+        </table>
+        
+    </body>
+    
+</html>
